@@ -24,7 +24,7 @@ const Navbar = () => {
           <a href="#Projects" className=' text-white cursor-pointer hover:text-gray-400'> Projects </a>
           <a href="#Testimonial" className=' text-white cursor-pointer hover:text-gray-400'> Testimonial </a>
         </ul>
-        <button className='hidden md:block bg-white py-2 px-8  rounded-full'>Sign -up</button>
+        <button className='hidden md:block bg-white py-2 px-8  rounded-full'>Profile</button>
         <img onClick={()=>setmobilemenu(true)} src={assets.menu_icon} alt="" className='md:hidden w-7 cursor-pointer'/>
       </div>
       <div className={`md:hidden ${ showemobilemenu ? 'w-full' : 'h-0 w-0 '} right-0 top-0 bottom-0 overflow-hidden bg-white h-[calc(100vh-71px)] transition-all`}>

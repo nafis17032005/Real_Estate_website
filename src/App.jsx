@@ -5,18 +5,16 @@ import Projects from './assets/components/Projects'
 import Testimonial from './assets/components/Testimonial'
 import Contact from './assets/components/Contact'
 import Footer from './assets/components/Footer'
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/AppRoutes"
 
 const App = () => {
   return (
     <div>
-      <Header/>
-      <About/>
-      <Projects/>
-      <Testimonial/>
-      <Contact/>
-      <Footer/>
+      <RouterProvider router={router} />;
     </div>
   )
 }
 
-export default App
+export default App;
+

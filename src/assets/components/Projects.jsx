@@ -6,9 +6,9 @@ const Projects = () => {
     const [cardtoshow, setcardtoshow] = useState(1);
 
     function nextProject() {
-        setcurrentindex((prevIndex)=>{
-            console.log("............",prevIndex);
-           return (prevIndex+1) % projectsData.length
+        setcurrentindex((prevIndex) => {
+            console.log("............", prevIndex);
+            return (prevIndex + 1) % projectsData.length
         })
     }
 
@@ -17,19 +17,19 @@ const Projects = () => {
     }
     console.log(currentindex, projectsData.length - 1)
 
-    useEffect(()=>{
-        const updateCardToShow= ()=>{
-            if(window.innerWidth >= 1024){
+    useEffect(() => {
+        const updateCardToShow = () => {
+            if (window.innerWidth >= 1024) {
                 setcardtoshow(projectsData.length)
-            }else{
+            } else {
                 setcardtoshow(1)
             }
         }
-            updateCardToShow();
+        updateCardToShow();
 
-            window.addEventListener('resize',updateCardToShow);
-            return ()=> window.removeEventListener('resize',updateCardToShow);
-    },[])
+        window.addEventListener('resize', updateCardToShow);
+        return () => window.removeEventListener('resize', updateCardToShow);
+    }, [])
     return (
         <div className='container mx-auto px-6 py-4 pt-20 md:px-20 lg:px-32 w-full overflow-x-hidden' id='Projects'>
             <h1 className='text-2xl sm:text-4xl font-bold mb-2 text-center'> Projects <span className='underline underline-offset-4 decoration-1 font-light '> Completed</span></h1>
