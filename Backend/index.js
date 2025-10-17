@@ -12,16 +12,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ MongoDB Connect
+// MongoDB Connect
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch((err) => console.error("❌ MongoDB Error:", err));
+  .then(() => console.log(" MongoDB Connected"))
+  .catch((err) => console.error(" MongoDB Error:", err));
 
-// ✅ User Schema
+// User Schema
 const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
